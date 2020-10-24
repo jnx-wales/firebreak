@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Break Lockdown Wales Countdown</title>
+    <style>
+        p {
+            font-size: 1.5rem;
+            margin: auto;
+            color: #fff;
+        }
+
+        #countdown {
+            font-size: 3rem;
+        }
+
+        html {
+            background: #D31027;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #EA384D, #D31027);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #EA384D, #D31027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+        }
+
+        .space {
+            height: 100px;
+        }
+
+        h1 {
+            color:#fff;
+        }
+
+        .container {
+            border-radius: 25px;
+            background-color: rgba(0, 0, 0, 0.3);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+            height: 280px;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: Calc(50vh - 280px);
+        }
+
+        .credit {
+            font-size: 0.8rem;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img width="50" src="dragon-solid.svg">
+    <h1>Wales Firebreak Lockdown</h1>
+<p id="countdown">
+<script>
+    
+// Set the date we're counting down to
+var countDownDate = new Date("Nov 9, 2020 00:01:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("countdown").innerHTML = days + "days<br> " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Firebreak Lockdown is now over :) Stay Safe.";
+  }
+}, 1000);
+</script></p>
+<div class="space"></div>
+</div><a href="https://jnx.wales">
+<p class="credit">Powered by<br>
+    <img src="https://jnx.wales/assets/jnx.svg" height="30" alt="JNx.wales Web Design">
+</p></a>
+</body>
+</html>
